@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+  archinsight-ai-analyzer:
+    image: archinsight-ai-analyzer:latest
+    container_name: archinsight-ai-analyzer
+    depends_on:
+      postgres:
+        condition: service_healthy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+volumes:
+  postgresql:
+  postgres_data:
