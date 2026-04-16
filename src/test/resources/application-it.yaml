@@ -20,3 +20,11 @@ spring:
   flyway:
     default-schema: _IT
     schemas: _IT
+
+aws:
+  s3:
+    region: us-east-1
+    access-key: test-access-key
+    secret-key: test-secret-key
+    bucket: test-bucket
+    endpoint: http://localhost:4566
