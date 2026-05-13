@@ -55,11 +55,6 @@ spec:
             periodSeconds: 10
             failureThreshold: 30
           env:
-            - name: NEW_RELIC_LICENSE_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: newrelic-secret
-                  key: license-key
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
