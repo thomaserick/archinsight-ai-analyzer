@@ -5,7 +5,7 @@ set -e
 # Deploy da aplicação Spring Boot no Kubernetes EKS
 # =============================
 
-NAMESPACE="archinsight-ai-analyzer"
+NAMESPACE="archinsight-ai-api"
 K8S_PATH="./devops/k8s/prod"
 
 echo "Iniciando deploy Kubernetes no namespace: $NAMESPACE"
